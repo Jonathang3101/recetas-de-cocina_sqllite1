@@ -1,6 +1,6 @@
 import sqlite3
 
-# Función para crear la tabla de recetas si no existe
+
 def crear_tabla():
     conexion = sqlite3.connect("libro_recetas.db")
     cursor = conexion.cursor()
@@ -17,7 +17,7 @@ def crear_tabla():
     conexion.commit()
     conexion.close()
 
-# Función para agregar una nueva receta
+
 def agregar_receta():
     nombre = input("Nombre de la receta: ")
     ingredientes = input("Ingredientes : ")
@@ -34,7 +34,7 @@ def agregar_receta():
 
     print("Receta agregada con éxito.")
 
-# Función para actualizar una receta existente
+
 def actualizar_receta():
     id_receta = input("ID de la receta a actualizar: ")
     nombre = input("Nuevo nombre de la receta: ")
@@ -52,7 +52,7 @@ def actualizar_receta():
 
     print("Receta actualizada con éxito.")
 
-# Función para eliminar una receta existente
+
 def eliminar_receta():
     id_receta = input("ID de la receta a eliminar: ")
 
@@ -66,7 +66,7 @@ def eliminar_receta():
 
     print("Receta eliminada con éxito.")
 
-# Función para ver el listado de recetas
+
 def ver_recetas():
     conexion = sqlite3.connect("libro_recetas.db")
     cursor = conexion.cursor()
@@ -82,7 +82,7 @@ def ver_recetas():
 
     conexion.close()
 
-# Función para buscar ingredientes y pasos de una receta
+
 def buscar_receta():
     keyword = input("Ingrese un ingrediente o paso de receta a buscar: ")
 
@@ -102,7 +102,7 @@ def buscar_receta():
 
     conexion.close()
 
-# Función principal
+
 def main():
     crear_tabla()
 
